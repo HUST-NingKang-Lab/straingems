@@ -9,12 +9,15 @@ Strain-GeMS aims to profile the strains within a species using short read metage
 It deploys SNP patterns based on statistically sound SNP calling and optimzied SNP clustering 
 to recover strain genotypes within a species using a set of genes.
 
-Install
+Install & Prepare database
 ===========
 
-You can download the zip archive of it from : 
+You can download the zip archive of it from github
 
-https:xxx
+Prepare database using following commands:
+```
+ tar -cf db/ref_db.tar db/ref_db
+```
 	
 Dependencies
 ============
