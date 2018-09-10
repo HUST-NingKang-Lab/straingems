@@ -149,6 +149,6 @@ Coverage information of the test data are given by MetaPhlAn2.
 Link to test data
 ===========
 
-The test data are upload to the NCBI webset:
+The test data are upload to the NCBI website:
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA480741
  
