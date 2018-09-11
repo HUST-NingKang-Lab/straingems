@@ -157,17 +157,15 @@ https://www.ncbi.nlm.nih.gov/bioproject/PRJNA480741
 
 JSD Calculating 
 ===========
-JSD was Calculated using following python script，
+Jensen-Shannon Divergenc was Calculated using following python script，
 
-********Jensen-Shannon Divergence**********         
-class: JSD
 method: JSD_core(q,p)
 input:
    q=[q1,q2,q3,...]
    p=[p1,p2,p3,...]
 output:
     JS divergence between set p and set q
-*******************************************
+
 
 from math import log
 
@@ -208,5 +206,5 @@ Truong D T, Franzosa E A, Tickle T L, et al. MetaPhlAn2 for enhanced metagenomic
 
 Luo C, Knight R, Siljander H, et al. ConStrains identifies microbial strains in metagenomic datasets[J]. Nature Biotechnology, 2015, 33(10):1045-1052.
 
-Mcelroy K E, Luciani F, Thomas T. GemSIM: general, error-model based simulator of next-generation sequencing data.[J]. Bmc Genomics, 2012, 13(1):74.
+Mcelroy K E, Luciani F, Thomas T. GemSIM: general, error-model based simulator of next-generation sequencing data.[J]. BMC Genomics, 2012, 13(1):74.
  
