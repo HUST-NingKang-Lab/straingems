@@ -142,8 +142,10 @@ Test data are generated using GemSIM_v1.6(Mcelroy, et al., 2012) by the GemReads
       -p use only to create paired end reads.
 	  
 e.g. Generation of the sample DS11x4 in Supplementary Table 1:
+
 	GemReads.py  -R ./ref/ -a abundance.txt  -n 5000000 -l d -p -u d -m ~/tools/GemSIM_v1.6/models/ill100v5_p.gzip -c -q 33 -o meta_DS11x4
-Coverage information of the test data are given by MetaPhlAn2.
+	
+	Coverage information of the test data are given by MetaPhlAn2.
 
 
 Link to test data
@@ -153,22 +155,22 @@ The test data are uploaded to the NCBI website:
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA480741
 
 
-Calculating the JSD distance between the predicted relative abandance and the real abandance
+JSD Calculating 
 ===========
 JSD was Calculated using following python script，
 
-#********Jensen-Shannon Divergence**********         
-#*******************************************
-#class: JSD
-#method: JSD_core(q,p)
-#input:
-#   q=[q1,q2,q3,...]
-#   p=[p1,p2,p3,...]
-#output:
-#    JS divergence between set p and set q
-#*******************************************
+********Jensen-Shannon Divergence**********         
+class: JSD
+method: JSD_core(q,p)
+input:
+   q=[q1,q2,q3,...]
+   p=[p1,p2,p3,...]
+output:
+    JS divergence between set p and set q
+*******************************************
 
 from math import log
+
 from numpy import array
 
 class JSD:
@@ -181,7 +183,6 @@ class JSD:
                 p.remove(p[i])
             else:
                 i = i+1
-
         return sum(_p * log(_p/_q,2) for (_p,_q) in zip(p,q) if _p!=0)
 
 
@@ -190,15 +191,22 @@ class JSD:
         return 0.5*self.KLD(p,M)+0.5*self.KLD(q,M)
 		
 e.g. Calculting the JSD distance between the predicted relative abandance of strains by Strain-GeMS and the real abandance in the 10-genomes in silico community
+
 	R=[0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10]
+	
 	S=[0.1104,0.1205,0.84,0.1884,0.1321,0,0.1337,0.819,0.861,0.628]
+	
 	jsd = JSD()
+	
 	print jsd.JSD_core(R,S)
 
 	
 References
 ===========
+
 Truong D T, Franzosa E A, Tickle T L, et al. MetaPhlAn2 for enhanced metagenomic taxonomic profiling[J]. Nature Methods, 2015, 12(10):902-3.
+
 Luo C, Knight R, Siljander H, et al. ConStrains identifies microbial strains in metagenomic datasets[J]. Nature Biotechnology, 2015, 33(10):1045-1052.
+
 Mcelroy K E, Luciani F, Thomas T. GemSIM: general, error-model based simulator of next-generation sequencing data.[J]. Bmc Genomics, 2012, 13(1):74.
  
