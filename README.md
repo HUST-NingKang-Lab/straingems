@@ -172,8 +172,8 @@ from math import log
 from numpy import array
 
 class JSD:
-    def KLD(self,p,q):
 
+    def KLD(self,p,q):
         i = 0
         while i < len(q):
             if q[i] == 0 :
