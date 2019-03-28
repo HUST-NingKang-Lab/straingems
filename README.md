@@ -38,7 +38,7 @@ Dependencies
 
 >Metaphlan2 2.1+
 
->multigems 0.1+
+>multigems 1.0+
 
 >samtools 0.1.19
 
